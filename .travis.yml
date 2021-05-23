@@ -1,0 +1,11 @@
+sudo: required
+services:
+  - docker
+before_install:
+  - docker build -t spbryan/deploy-test .
+script:
+  - docker run spbryan/deploy-test npm test
+after_success:
+  - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
+  - docker push spbryan/deploy-test
+#  - docker login -u $DOCKER_USER -p $DOCKER_PASSWORD
