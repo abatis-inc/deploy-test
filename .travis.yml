@@ -8,4 +8,7 @@ script:
 after_success:
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
   - docker push spbryan/deploy-test
+deploy:
+  - provider: elasticbeanstalk
+
 #  - docker login -u $DOCKER_USER -p $DOCKER_PASSWORD
