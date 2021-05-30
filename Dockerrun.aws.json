@@ -1,0 +1,17 @@
+{
+  "AWSEBDockerrunVersion": 2,
+  "containerDefinitions": [
+    {
+      "name": "DeployTestApplicationAPI",
+      "image": "spbryan/deploy-test",
+      "portMappings": [
+        {
+          "hostPort": 3000,
+          "containerPort": 3000
+        }
+      ],
+      "essential": false,
+      "memory": 300
+    }
+  ]
+}
