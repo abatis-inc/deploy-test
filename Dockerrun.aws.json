@@ -6,8 +6,8 @@
       "image": "spbryan/deploy-test",
       "portMappings": [
         {
-          "hostPort": 80,
-          "containerPort": 80
+          "hostPort": 8080,
+          "containerPort": 8080
         }
       ],
       "essential": true,
